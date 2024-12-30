@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="koleksi.html">Koleksi</a></li>
+            <li><a href="peminjaman.html">Peminjaman</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #00a6a6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #0079b8;
+        }
+
+        .collection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .book {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, .1) ;
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .book h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .book p {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .book button {
+            padding: 10px 20px;
+            background-color: #00a6a6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .book button:hover {
+            background-color: #0079b8;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Library Collection</h1>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search books...">
+            <button>Search</button>
+        </div>
+
+        <div class="collection">
+            <div class="book">
+                <img src="c:\Users\adity\Downloads\y.jpg" alt="Book Cover">
+                <h2>Sekolah di Atas Bukit</h2>
+                <p>Penulis: The Nature Consevancy</p>
+                <p>Tahun Terbit: 2015</p>
+                <button>View Details</button>
+            </div>
+
+            <div class="book">
+                <img src="data:image/jpeg;base64,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" alt="Book Cover">
+                <h2>Laskar Pelangi</h2>
+                <p>Penulis: Andrea Hirata</p>
+                <p>Tahun Terbit: 2005</p>
+                <button>View Details</button>
+            </div>
+
+            <div class="book">
+                <img src="c:\Users\adity\Downloads\malioboro 3.jpg" alt="Book Cover">
+                <h2>Malioboro at Midnight</h2>
+                <p>Penulis: Skysphire</p>
+                <p>Tahun Terbit: 2023</p>
+                <button>View Details</button>
+            </div>
+
+            <div class="book">
+                <img src="c:\Users\adity\Downloads\t.jpg" alt="Book Cover">
+                <h2>The Graphic Novel</h2>
+                <p>Penulis: Stephenie Meyer</p>
+                <p>Tahun Terbit: 2005</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy;PerpusPam. Hak Cipta Dilindungi.
+    </footer>
+</body>
+</html>
+
+</body>

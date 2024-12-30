@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="koleksi.html">Koleksi</a></li>
+            <li><a href="peminjaman.html">Peminjaman</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Borrowing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #00a6a6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0070b8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Peminjaman Buku</h1>
+
+        <form id="borrowing-form">
+            <div class="form-group">
+                <label for="borrower-name">Nama Peminjam</label>
+                <input type="text" id="borrower-name" placeholder="Masukan nama peminjam" required>
+            </div>
+
+            <div class="form-group">
+                <label for="book-title">Judul buku</label>
+                <input type="text" id="book-title" placeholder="Masukan judul buku" required>
+            </div>
+
+            <div class="form-group">
+                <label for="borrow-date">Tanggal Peminjaman</label>
+                <input type="date" id="borrow-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="return-date">Tanggal Pengembalian</label>
+                <input type="date" id="return-date" required>
+            </div>
+
+            <button type="submit">Tambah Peminjaman</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Peminjam</th>
+                    <th>Judul Buku</th>
+                    <th>Tanggal Peminjaman</th>
+                    <th>Tanggal Pengembalian</th>
+                </tr>
+            </thead>
+            <tbody id="borrowing-table-body">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const form = document.getElementById('borrowing-form');
+        const tableBody = document.getElementById('borrowing-table-body');
+        let borrowingCount = 0;
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const borrowerName = document.getElementById('borrower-name').value;
+            const bookTitle = document.getElementById('book-title').value;
+            const borrowDate = document.getElementById('borrow-date').value;
+            const returnDate = document.getElementById('return-date').value;
+
+            if (borrowerName && bookTitle && borrowDate && returnDate) {
+                borrowingCount++;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${borrowingCount}</td>
+                    <td>${borrowerName}</td>
+                    <td>${bookTitle}</td>
+                    <td>${borrowDate}</td>
+                    <td>${returnDate}</td>
+                `;
+
+                tableBody.appendChild(row);
+                form.reset();
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+    </script>
+        <footer>
+            &copy;PerpusPam. Hak Cipta Dilindungi.
+        </footer>
+</body>
+</html>
+</body>

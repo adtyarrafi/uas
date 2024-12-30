@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aplikasi Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="koleksi.html">Koleksi</a></li>
+            <li><a href="peminjaman.html">Peminjaman</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up & Register - Library</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f9;
+            }
+    
+            .form-container {
+                max-width: 800px;
+                margin: 50px auto;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;    
+
+            }
+    
+            .form-container h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+    
+            .form-group {
+                margin-bottom: 15px;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+    
+            input {
+                width: 100%;
+                padding: 5px;
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #00a6a6;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+    
+            button:hover {
+                background-color: #0070b8;
+            }
+    
+            .alternate {
+                text-align: center;
+                margin-top: 10px;
+            }
+    
+            .alternate a {
+                color: #00a6a6;
+                text-decoration: none;
+            }
+    
+            .alternate a:hover {
+                text-decoration: underline;
+            }
+    
+        </style>
+    </head>
+    <body>
+    
+        <div class="form-container" id="signup-form">
+            <h1>Daftar</h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" placeholder="Masukan nama lengkap" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" placeholder="Masukan alamat email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Kata Sandi</label>
+                    <input type="password" id="password" placeholder="Buat kata sandi" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Konfirmasi Kata Sandi</label>
+                    <input type="password" id="confirm-password" placeholder="Ulangi kata sandi" required>
+                </div>
+                <button type="submit">Daftar</button>
+            </form>
+            <div class="alternate">
+                Sudah memliki akun? <a href="#" onclick="showRegister()">Masuk disini</a>
+            </div>
+        </div>
+    
+        <div class="form-container" id="register-form" style="display: none;">
+            <h1>Masuk</h1>
+            <form>
+                <div class="form-group">
+                    <label for="library-id">Nama</label>
+                    <input type="text" id="library-id" placeholder="Masukan nama anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Alamat Emaill</label>
+                    <input type="email" id="register-email" placeholder="Masukan email anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Kata Sandi</label>
+                    <input type="password" id="register-password" placeholder="Masukan kata sandi anda" required>
+                </div>
+                <button type="submit">Masuk</button>
+            </form>
+            <div class="alternate">
+                Perlu membuat akun? <a href="#" onclick="showSignUp()">Daftar disini</a>
+            </div>
+        </div>
+    
+        <script>
+            function showSignUp() {
+                document.getElementById('signup-form').style.display = 'block';
+                document.getElementById('register-form').style.display = 'none';
+            }
+    
+            function showRegister() {
+                document.getElementById('signup-form').style.display = 'none';
+                document.getElementById('register-form').style.display = 'block';
+            }
+        </script>
+            <footer>
+                &copy;PerpusPam. Hak Cipta Dilindungi.
+            </footer>
+    </body>
+    </html>
+    
+</body>
